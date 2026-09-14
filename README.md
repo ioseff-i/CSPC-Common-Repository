@@ -3,7 +3,7 @@
 My coursework repository for the course.
 Each practical lives under `PW<n>/Lab <X>/`.
 
-## Setup
+## Setup by NUSRAT SEYIDZADE 14 SEPTEMBER 2026
 
 Create and activate the environment for a given lab:
 
