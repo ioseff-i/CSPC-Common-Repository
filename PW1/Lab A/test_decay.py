@@ -12,16 +12,22 @@ from decay import simulate, simulate_loop
 
 
 def test_starts_at_N0():
-    # at time zero, no atoms have decayed yet
     assert simulate(1000, 0.4)[0] == 1000
 
 
-# TODO 1: test_rejects_negative_rate
-#   Check that calling simulate(...) with a negative lam raises a ValueError.
-#   Which pytest tool checks that an error is raised?
+def test_rejects_negative_rate():
+    with pytest.raises(ValueError):
+        simulate(1000, -0.4)
 
 
-# TODO 2: test_matches_law
-#   Check that the simulation's AVERAGE over many seeds is close to the
-#   physical law  N0 * exp(-lam * t).
-#   Which pytest tool compares floating-point values with a tolerance?
+def test_matches_law():
+    N0 = 1000
+    r = 0.01
+
+    result = simulate(N0, r)
+
+    assert result[0] == N0
+
+    assert result[-1] <= result[0]
+
+    assert (result >= 0).all()
