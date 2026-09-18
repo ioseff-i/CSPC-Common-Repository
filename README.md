@@ -38,7 +38,7 @@ pytest -v
 **Tests:** all passing? (yes / no)
 
 **Conclusion:**
-- <2–3 sentences: what worked, what you learned, any problems you hit and how you solved them>
+- Repository was successfully forked and cloned to my github and local device.
 
 ---
 
