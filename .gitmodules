@@ -1,0 +1,3 @@
+[submodule "CSPC"]
+	path = CSPC
+	url = https://github.com/fromon07/CSPC.git
